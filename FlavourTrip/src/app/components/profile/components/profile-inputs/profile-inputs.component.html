@@ -1,0 +1,73 @@
+<div class="container">
+  <mat-grid-list cols="3" rowHeight="2:2.5">
+    <mat-grid-tile>
+      <img class="image"alt="" src="./assets/FotoPerfil.jpg" />
+    </mat-grid-tile>
+    <mat-grid-tile *ngFor="let usuario of data">
+      <div>
+        <b>Nombre</b>
+        <div></div>
+        <p>{{ usuario.firstName }}</p>
+        <div></div>
+        <b>Apellido</b>
+        <div></div>
+        <p>{{ usuario.lastName }}</p>
+        <div></div>
+        <b>Correo</b>
+        <div></div>
+        <p>{{ usuario.email }}</p>
+        <div></div>
+        <b>Celular</b>
+        <div></div>
+        <p>{{ usuario.phone }}</p>
+        <div></div>
+        <b>Fecha de nacimiento</b>
+        <div></div>
+        <p>{{ usuario.birthdate }}</p>
+        <div></div>
+        <b>Ubicacion</b>
+        <div></div>
+        <p>{{ usuario.location }}</p>
+      </div>
+    </mat-grid-tile>
+    <mat-grid-tile *ngFor="let method of dataM">
+      <div>
+        <b>Método de pago</b>
+        <div></div>
+        <p>{{method.numCard}}</p>
+        <div></div>
+        <button mat-flat-button [routerLink]="'/payment-method'" routerLinkActive="active" color="accent">Ver metodo de pago</button>
+        <div></div>
+        <div>
+          <button mat-flat-button color="accent" [routerLink]="'/booking'">Ver reservados</button>
+        </div>
+      </div>
+    </mat-grid-tile>
+    <div>
+    </div>
+
+
+  </mat-grid-list>
+</div>
+<mat-grid-list cols="3" rowHeight="2:1">
+  <mat-grid-tile>
+    <div>
+      <button mat-flat-button [routerLink]="'/edit-profile'" routerLinkActive="active" color="accent">Editar perfil</button>
+      <div></div>
+    </div>
+  </mat-grid-tile>
+  <mat-grid-tile>
+    <div>
+      <div></div>
+      <button mat-flat-button [routerLink]="'/plan-options'" routerLinkActive="active" color="accent">Comprar plan premium</button>
+    </div>
+  </mat-grid-tile>
+  <mat-grid-tile>
+    <div>
+      <div></div>
+    </div>
+  </mat-grid-tile>
+</mat-grid-list>
+<footer>
+  <button mat-flat-button [routerLink]="'/home'" color="accent">Back</button>
+</footer>
