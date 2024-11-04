@@ -3,11 +3,12 @@ import {RouterLink,Router} from "@angular/router";
 import {LocalstorageService} from "../../../public/components/local-storage/localstorage.service";
 import {FormsModule} from "@angular/forms";
 import {NgIf} from "@angular/common";
+import {ButtonModule} from 'primeng/button';
 
 @Component({
   selector: 'app-register',
   standalone: true,
-  imports: [RouterLink, FormsModule, NgIf],
+  imports: [RouterLink, FormsModule, NgIf, ButtonModule],
   templateUrl: './register.component.html',
   styleUrl: './register.component.css'
 })
