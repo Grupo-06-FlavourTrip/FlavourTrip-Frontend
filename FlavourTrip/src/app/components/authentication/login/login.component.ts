@@ -3,11 +3,12 @@ import {RouterLink, Router} from "@angular/router";
 import {LocalstorageService} from "../../../public/components/local-storage/localstorage.service";
 import {FormsModule} from "@angular/forms";
 import {NgIf} from "@angular/common";
+import { ButtonModule } from 'primeng/button';
 
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [RouterLink, FormsModule, NgIf],
+  imports: [RouterLink, FormsModule, NgIf, ButtonModule],
   templateUrl: './login.component.html',
   styleUrl: './login.component.css'
 })
