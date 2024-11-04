@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { RestaurantsService } from '../../services/restaurantes.service';
+import { RestaurantsService } from '../../services/restaurante.service';
 import { Restaurante } from '../../model/restaurante.entity';
 import { Observable } from 'rxjs';
 import { CommonModule } from '@angular/common'; // Importa CommonModule

@@ -9,7 +9,6 @@ import {OnInit} from "@angular/core";
 import {ToursService} from "../../services/tours.service";
 import {FormBuilder, FormGroup, ReactiveFormsModule} from "@angular/forms";
 import {Tour} from "../../model/tour.entity";
-import {RestaurantsService} from "../../../restaurante/services/restaurantes.service";
 import {Restaurante} from "../../../restaurante/model/restaurante.entity";
 
 @Component({

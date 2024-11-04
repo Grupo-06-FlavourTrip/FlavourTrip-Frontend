@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { ButtonModule} from "primeng/button";
 import {RouterLink, Router} from "@angular/router";
 import {LocalstorageService} from "../../../public/components/local-storage/localstorage.service";
 import {FormsModule} from "@angular/forms";
@@ -8,7 +7,7 @@ import {NgIf} from "@angular/common";
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [ButtonModule, RouterLink, FormsModule, NgIf],
+  imports: [RouterLink, FormsModule, NgIf],
   templateUrl: './login.component.html',
   styleUrl: './login.component.css'
 })

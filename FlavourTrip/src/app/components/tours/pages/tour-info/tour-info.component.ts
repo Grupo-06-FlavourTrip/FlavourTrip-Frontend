@@ -4,7 +4,7 @@ import {MatCard, MatCardContent, MatCardHeader, MatCardImage} from "@angular/mat
 import {RouterLink, RouterLinkActive} from "@angular/router";
 import {NgForOf, NgIf} from "@angular/common";
 import {ToursService} from "../../services/tours.service";
-import {RestaurantsService} from "../../../restaurante/services/restaurantes.service";
+import {RestaurantsService} from '../../../restaurante/services/restaurante.service';
 import {Restaurante} from "../../../restaurante/model/restaurante.entity";
 
 @Component({
