@@ -18,6 +18,8 @@ import {PaymentMethodComponent} from './components/profile/components/payment-me
 import { NgModule } from "@angular/core";
 import { RouterModule } from "@angular/router";
 import {TourInfoComponent} from './components/tours/pages/tour-info/tour-info.component';
+import { RestaurantFormComponent } from './components/restaurante/page/restaurant-form/restaurant-form.component';
+import { TourFormComponent } from './components/tours/pages/tour-form/tour-form.component';
 
 
 export const routes: Routes = [
@@ -35,6 +37,8 @@ export const routes: Routes = [
       {path:'tour-payment-denied',component:TourPaymentDeniedComponent},
 
       {path:'restaurant-list',component:RestaurantListComponent},
+      {path:'add-tour',component:TourFormComponent},
+      {path:'add-restaurant',component:RestaurantFormComponent},
 
       {path:'profile', component:ProfileInputsComponent},
       {path:'edit-profile', component:EditProfileComponent},

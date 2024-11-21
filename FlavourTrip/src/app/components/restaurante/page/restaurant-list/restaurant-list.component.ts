@@ -1,9 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { RestaurantsService } from '../../services/restaurante.service';
 import { Restaurante } from '../../model/restaurante.entity';
 import { Observable } from 'rxjs';
 import { CommonModule } from '@angular/common'; // Importa CommonModule
-import { RouterLink } from '@angular/router'; // Asegúrate de tener RouterLink
+import { RouterLink, Router } from '@angular/router'; // Asegúrate de tener RouterLink
 import { MatIconModule } from '@angular/material/icon'; // Asegúrate de tener MatIconModule
 import { MatButtonModule } from '@angular/material/button'; // Asegúrate de tener MatButtonModule
 import { MatToolbarModule } from '@angular/material/toolbar'; // Asegúrate de tener MatToolbarModule
@@ -21,7 +21,7 @@ import { NgOptimizedImage } from '@angular/common'; // Asegúrate de tener NgOpt
     MatIconModule,
     MatCardModule,
     NgOptimizedImage
-  ],
+],
   templateUrl: './restaurant-list.component.html',
   styleUrls: ['./restaurant-list.component.css']
 })
@@ -29,7 +29,7 @@ export class RestaurantListComponent implements OnInit {
   restaurants$: Observable<Restaurante[]>;
   dataR: Restaurante[]= [];
 
-  constructor(private restaurantsService: RestaurantsService) {
+  constructor(private restaurantsService: RestaurantsService, private router: Router) {
     this.restaurants$ = this.restaurantsService.getRestaurants();
   }
 
@@ -38,9 +38,19 @@ export class RestaurantListComponent implements OnInit {
       this.dataR = response;
     })
   }
+  
+  restaurants: any[] = [];
+
+  goToRestaurantForm() {
+    this.router.navigate(['/add-restaurant']);
+  }
 
   ngOnInit() {
     this.getAllRestaurants();
+    const state = history.state;
+    if (state.newRestaurant) {
+      this.dataR.push(state.newRestaurant);
+    }
   }
   redirectToBooking(url:string):void{
     window.location.href=url;

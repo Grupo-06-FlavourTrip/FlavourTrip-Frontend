@@ -1,0 +1,25 @@
+<div class="form-container">
+  <h2>Agregar Restaurante</h2>
+  <form (ngSubmit)="onSubmit()" #restaurantForm="ngForm">
+    <mat-form-field>
+      <input matInput placeholder="Nombre del restaurante" name="name" ngModel required>
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+      <textarea matInput placeholder="Descripción" name="description" ngModel required></textarea>
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+      <input matInput placeholder="Imagen (URL)" name="image" ngModel required>
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+      <input matInput placeholder="Link al restaurante" name="bookingLink" ngModel required>
+    </mat-form-field>
+    <br>
+    <div style="align-items: center; align-content: center; text-align: center;">
+      <button mat-flat-button color="primary" type="submit">Guardar</button>
+      <button mat-flat-button color="warn" type="button" (click)="onCancel()">Cancelar</button>
+    </div>
+  </form>
+</div>
