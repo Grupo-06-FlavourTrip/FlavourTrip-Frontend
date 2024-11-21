@@ -5,14 +5,16 @@ import {UsuariosService} from "../../services/usuarios.service";
 import {Method} from "../../model/method.entity";
 import {MethodService} from "../../services/method.service";
 import {RouterLink} from "@angular/router";
+import {HeaderContentComponent} from "../../../../public/components/header-content/header-content.component";
 
 @Component({
   selector: 'app-payment-method',
   standalone: true,
-  imports: [
-    FormsModule,
-    RouterLink
-  ],
+    imports: [
+        FormsModule,
+        RouterLink,
+        HeaderContentComponent
+    ],
   templateUrl: './payment-method.component.html',
   styleUrl: './payment-method.component.css'
 })

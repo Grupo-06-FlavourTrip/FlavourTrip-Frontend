@@ -10,6 +10,7 @@ import {ToursService} from "../../services/tours.service";
 import {FormBuilder, FormGroup, ReactiveFormsModule} from "@angular/forms";
 import {Tour} from "../../model/tour.entity";
 import {Restaurante} from "../../../restaurante/model/restaurante.entity";
+import {HeaderContentComponent} from "../../../../public/components/header-content/header-content.component";
 
 @Component({
   selector: 'app-tour-list',
@@ -23,7 +24,8 @@ import {Restaurante} from "../../../restaurante/model/restaurante.entity";
     RouterLinkActive, 
     NgForOf, 
     NgIf, 
-    ReactiveFormsModule
+    ReactiveFormsModule, 
+    HeaderContentComponent
   ],
   templateUrl: './tour-list.component.html',
   styleUrls: ['./tour-list.component.css']

@@ -11,11 +11,12 @@ import {Usuario} from "../../model/usuario.entity";
 import {UsuariosService} from '../../services/usuarios.service';
 import {FormsModule, NgForm} from "@angular/forms";
 import {NgIf} from "@angular/common";
+import {HeaderContentComponent} from "../../../../public/components/header-content/header-content.component";
 
 @Component({
   selector: 'app-edit-profile',
   standalone: true,
-  imports: [MatGridListModule, MatDividerModule, MatFormFieldModule, MatInputModule, MatSelectModule, MatButtonModule, RouterLink, FormsModule, NgIf],
+    imports: [MatGridListModule, MatDividerModule, MatFormFieldModule, MatInputModule, MatSelectModule, MatButtonModule, RouterLink, FormsModule, NgIf, HeaderContentComponent],
   templateUrl: './edit-profile.component.html',
   styleUrl: './edit-profile.component.css'
 })

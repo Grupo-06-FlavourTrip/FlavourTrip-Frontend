@@ -6,21 +6,23 @@ import {NgForOf, NgIf} from "@angular/common";
 import {ToursService} from "../../services/tours.service";
 import {RestaurantsService} from '../../../restaurante/services/restaurante.service';
 import {Restaurante} from "../../../restaurante/model/restaurante.entity";
+import {HeaderContentComponent} from "../../../../public/components/header-content/header-content.component";
 
 @Component({
   selector: 'app-tour-info',
   standalone: true,
-  imports: [
-    MatButton,
-    MatCard,
-    MatCardContent,
-    MatCardHeader,
-    MatCardImage,
-    RouterLinkActive,
-    RouterLink,
-    NgIf,
-    NgForOf
-  ],
+    imports: [
+        MatButton,
+        MatCard,
+        MatCardContent,
+        MatCardHeader,
+        MatCardImage,
+        RouterLinkActive,
+        RouterLink,
+        NgIf,
+        NgForOf,
+        HeaderContentComponent
+    ],
   templateUrl: './tour-info.component.html',
   styleUrl: './tour-info.component.css'
 })

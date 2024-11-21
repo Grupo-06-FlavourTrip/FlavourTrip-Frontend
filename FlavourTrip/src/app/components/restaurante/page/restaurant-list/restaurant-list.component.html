@@ -1,3 +1,6 @@
+
+<app-header-content></app-header-content>
+
 <head>
   <link
     rel="stylesheet"
@@ -5,20 +8,24 @@
   />
 </head>
 <body>
-<br>
-<h1 class="titulo">Restaurants</h1>
+<div class="title-container">
+  <h1>Restaurants</h1>
+</div>
+
 <div class="contenedor-principal">
   <div class="contenedor" *ngFor="let restaurant of restaurants$ | async">
     <mat-card class="card-restaurant">
       <mat-card-content class="tc">
-        <img class="imgcenter" [src]="restaurant.image" [alt]="restaurant.name" width="540" height="347">
-        <br><br>
-        <h1>{{ restaurant.name }}</h1>
-        <br>
-        <h2>{{ restaurant.description }}</h2>
-        <br><br>
+        <img class="imgcenter" [src]="restaurant.image" [alt]="restaurant.name" width="300" height="200">
+        <mat-card-header class="title">
+          <p>{{ restaurant.name }}</p>
+        </mat-card-header>
+        <div class="info-container">
+          <p style="color:white;"> {{ restaurant.description }} </p>
+        </div>
+
         <div class="botones">
-          <button mat-flat-button (click)="redirectToBooking(restaurant.bookingLink)" contextmenu="bookNowMenu">Visitar</button>
+          <button mat-stroked-button (click)="redirectToBooking(restaurant.bookingLink)" contextmenu="bookNowMenus" class="boton" style="color:white;">Visitar</button>
           <menu type="context" id="bookNowMenu">
             <menuitem label="Open link in new tab" onclick="openLinkInNewTab()"></menuitem>
           </menu>
@@ -29,14 +36,14 @@
   <div class="contenedor" *ngFor="let restaurants of dataR">
     <mat-card class="card-restaurant">
       <mat-card-content class="tc">
-        <img class="imgcenter" [src]="restaurants.image" [alt]="restaurants.name" width="540" height="347">
+        <img class="imgcenter" [src]="restaurants.image" [alt]="restaurants.name" width="300" height="200">
         <br><br>
         <h1>{{ restaurants.name }}</h1>
         <br>
         <h2>{{ restaurants.description }}</h2>
         <br><br>
         <div class="botones">
-          <button mat-flat-button (click)="redirectToBooking(restaurants.bookingLink)" contextmenu="bookNowMenus">Visitar</button>
+          <button mat-stroked-button (click)="redirectToBooking(restaurants.bookingLink)" contextmenu="bookNowMenus" class="boton" style="color:white;">Visitar</button>
           <menu type="context" id="bookNowMenus">
             <menuitem label="Open link in new tab" onclick="openLinkInNewTab()"></menuitem>
           </menu>
@@ -52,13 +59,7 @@
 </div>
 
 </body>
-<br><br><br><br><br><br><br><br>
 
 <footer>
-  <div class="back">
-    <button [routerLink]="'/home'" mat-flat-button>Back</button>
-    <br><br>
-    <br><br>
-    <br><br>
-  </div>
+  <button mat-stroked-button [routerLink]="'/home'" routerLinkActive="active" class="boton" style="color:white;">Volver</button>
 </footer>
