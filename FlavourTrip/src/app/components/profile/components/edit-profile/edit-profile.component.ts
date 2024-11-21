@@ -5,7 +5,7 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatButtonModule} from '@angular/material/button';
-import {RouterLink} from "@angular/router";
+import {RouterLink, RouterLinkActive} from "@angular/router";
 import {EventEmitter, Input, Output, ViewChild} from '@angular/core';
 import {Usuario} from "../../model/usuario.entity";
 import {UsuariosService} from '../../services/usuarios.service';
@@ -16,7 +16,7 @@ import {HeaderContentComponent} from "../../../../public/components/header-conte
 @Component({
   selector: 'app-edit-profile',
   standalone: true,
-    imports: [MatGridListModule, MatDividerModule, MatFormFieldModule, MatInputModule, MatSelectModule, MatButtonModule, RouterLink, FormsModule, NgIf, HeaderContentComponent],
+  imports: [MatGridListModule, MatDividerModule, MatFormFieldModule, MatInputModule, MatSelectModule, MatButtonModule, RouterLink, FormsModule, NgIf, HeaderContentComponent, RouterLinkActive],
   templateUrl: './edit-profile.component.html',
   styleUrl: './edit-profile.component.css'
 })

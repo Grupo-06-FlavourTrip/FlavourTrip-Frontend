@@ -4,7 +4,7 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatButtonModule} from '@angular/material/button';
-import {RouterLink} from "@angular/router";
+import {RouterLink, RouterLinkActive} from "@angular/router";
 import {UsuariosService} from '../../services/usuarios.service';
 import {Usuario} from '../../model/usuario.entity';
 import {CommonModule} from '@angular/common';
@@ -15,7 +15,7 @@ import {HeaderContentComponent} from "../../../../public/components/header-conte
 @Component({
   selector: 'app-profile-inputs',
   standalone: true,
-    imports: [MatGridListModule, MatFormFieldModule, MatInputModule, MatButtonModule, RouterLink, CommonModule, HeaderContentComponent],
+  imports: [MatGridListModule, MatFormFieldModule, MatInputModule, MatButtonModule, RouterLink, CommonModule, HeaderContentComponent, RouterLinkActive],
   templateUrl: './profile-inputs.component.html',
   styleUrl: './profile-inputs.component.css'
 })

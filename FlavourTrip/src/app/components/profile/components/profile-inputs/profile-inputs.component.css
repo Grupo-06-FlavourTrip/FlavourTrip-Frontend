@@ -22,3 +22,21 @@ p{
 .image {
   border-radius: 6px;
 }
+.boton {
+  background-color: #e82574;
+  border-radius: 5px;
+  color: white;
+  padding: 5px 10px 5px 10px;
+  font-size: 1.14rem;
+  margin: 50px 0 0 0;
+}
+
+.boton:hover {
+  background-color: #a11950;
+}
+
+footer {
+  position: fixed;
+  left: 30px;
+  bottom: 30px;
+}
