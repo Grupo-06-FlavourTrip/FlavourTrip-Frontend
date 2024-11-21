@@ -1,0 +1,20 @@
+h2 {
+  margin-bottom: 16px;
+}
+
+.form-container {
+  background-color: white; 
+  padding: 20px; 
+  margin: 20px; 
+  border-radius: 8px;
+  width: 70%;
+}
+
+mat-form-field {
+  width: 100%;
+}
+
+button {
+  margin-right: 10px;
+}
+  

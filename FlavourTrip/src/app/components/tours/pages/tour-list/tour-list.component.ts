@@ -14,7 +14,17 @@ import {Restaurante} from "../../../restaurante/model/restaurante.entity";
 @Component({
   selector: 'app-tour-list',
   standalone: true,
-  imports: [MatCardModule, MatButtonModule, MatIconModule, MatTooltipModule, RouterLink, RouterLinkActive, NgForOf, NgIf, ReactiveFormsModule],
+  imports: [
+    MatCardModule, 
+    MatButtonModule, 
+    MatIconModule, 
+    MatTooltipModule, 
+    RouterLink, 
+    RouterLinkActive, 
+    NgForOf, 
+    NgIf, 
+    ReactiveFormsModule
+  ],
   templateUrl: './tour-list.component.html',
   styleUrls: ['./tour-list.component.css']
 })
@@ -95,6 +105,16 @@ export class TourListComponent implements OnInit{
     this.tourService.getAll().subscribe((response: any) => {
       this.dataT = response;
     })
+  }
+
+  tour: any[] = [];
+
+  goToAddTour() {
+    this.router.navigate(['/add-tour']);
+  }
+
+  addTour(newTour: any) {
+    this.tour.push(newTour);
   }
 
   ngOnInit() {

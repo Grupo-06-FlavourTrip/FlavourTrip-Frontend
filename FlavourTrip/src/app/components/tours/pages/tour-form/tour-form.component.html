@@ -1,0 +1,67 @@
+<div class="form-container">
+  <h2>Agregar Tour</h2>
+
+  <form (ngSubmit)="onSubmit()" #tourForm="ngForm">
+    <mat-form-field>
+      <input matInput placeholder="Titulo" name="titleTour" ngModel required>
+    </mat-form-field>
+    
+    <mat-form-field>
+      <textarea matInput placeholder="Imagen" name="imageTour" ngModel required></textarea>
+    </mat-form-field>
+    
+    <mat-form-field>
+      <input matInput placeholder="Instructor" name="instructor" ngModel required>
+    </mat-form-field>
+    
+    <mat-form-field>
+      <input matInput placeholder="Rating" name="rating" ngModel required>
+    </mat-form-field>
+    
+    <mat-form-field>
+      <input matInput placeholder="Número de ratings" name="numberOfRatings" ngModel required>
+    </mat-form-field>
+    
+    <mat-form-field>
+      <input matInput placeholder="Precio mínimo" name="minPrice" ngModel required>
+    </mat-form-field>
+    
+    <mat-form-field>
+      <input matInput placeholder="Cantidad de personas" name="currentPeople" ngModel required>
+    </mat-form-field>
+   
+    <mat-form-field>
+      <input matInput placeholder="Máximo de personas" name="maxPeople" ngModel required>
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+      <input matInput placeholder="Idiomas" name="language" ngModel required>
+    </mat-form-field>
+    
+    <mat-form-field>
+      <input matInput placeholder="Duración en horas" name="duration" ngModel required>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Items incluidos" name="itemsIncluded" ngModel required>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Fecha" name="date" ngModel required>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Descripción" name="description" ngModel required>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Horarios" name="times" ngModel required>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Horas" name="hours" ngModel required>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Restaurantes" name="titleRestaurant" ngModel required>
+    </mat-form-field>
+    <div style="align-items: center; align-content: center; text-align: center;">
+      <button mat-flat-button color="primary" type="submit">Guardar</button>
+      <button mat-flat-button color="warn" type="button" (click)="onCancel()">Cancelar</button>
+    </div>
+  </form>
+</div>

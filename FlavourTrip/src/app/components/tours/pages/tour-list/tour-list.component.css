@@ -115,3 +115,19 @@ footer {
   width: 56px;
   height: 56px;
 }
+
+.floating-button {
+  position: fixed;
+  bottom: 20px; 
+  right: 20px; 
+  z-index: 1000; 
+}
+
+.floating-button button {
+  border-radius: 50%; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); 
+}
+
+.floating-button button:hover {
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3); 
+}
