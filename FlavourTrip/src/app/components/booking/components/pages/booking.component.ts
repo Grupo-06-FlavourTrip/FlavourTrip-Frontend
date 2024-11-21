@@ -6,11 +6,12 @@ import {ToursService} from "../../../tours/services/tours.service";
 import {MatIcon} from "@angular/material/icon";
 import {Booking} from "../../model/booking.entity";
 import {BookingService} from "../../services/booking.service";
+import {HeaderContentComponent} from "../../../../public/components/header-content/header-content.component";
 
 @Component({
   selector: 'app-booking',
   standalone: true,
-  imports: [MatTableModule, MatButton, RouterLinkActive, RouterLink, MatIcon, MatIconButton],
+    imports: [MatTableModule, MatButton, RouterLinkActive, RouterLink, MatIcon, MatIconButton, HeaderContentComponent],
   templateUrl: './booking.component.html',
   styleUrl: './booking.component.css'
 })

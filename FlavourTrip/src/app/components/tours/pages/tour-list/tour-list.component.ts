@@ -10,11 +10,12 @@ import {ToursService} from "../../services/tours.service";
 import {FormBuilder, FormGroup, ReactiveFormsModule} from "@angular/forms";
 import {Tour} from "../../model/tour.entity";
 import {Restaurante} from "../../../restaurante/model/restaurante.entity";
+import {HeaderContentComponent} from "../../../../public/components/header-content/header-content.component";
 
 @Component({
   selector: 'app-tour-list',
   standalone: true,
-  imports: [MatCardModule, MatButtonModule, MatIconModule, MatTooltipModule, RouterLink, RouterLinkActive, NgForOf, NgIf, ReactiveFormsModule],
+    imports: [MatCardModule, MatButtonModule, MatIconModule, MatTooltipModule, RouterLink, RouterLinkActive, NgForOf, NgIf, ReactiveFormsModule, HeaderContentComponent],
   templateUrl: './tour-list.component.html',
   styleUrls: ['./tour-list.component.css']
 })

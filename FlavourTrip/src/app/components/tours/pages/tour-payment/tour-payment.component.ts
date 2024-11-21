@@ -4,21 +4,23 @@ import {MatCard, MatCardContent, MatCardHeader, MatCardImage} from "@angular/mat
 import {RouterLink, RouterLinkActive} from "@angular/router";
 import {NgForOf, NgIf} from "@angular/common";
 import {ToursService} from "../../services/tours.service";
+import {HeaderContentComponent} from "../../../../public/components/header-content/header-content.component";
 
 @Component({
   selector: 'app-tour-payment',
   standalone: true,
-  imports: [
-    MatButton,
-    MatCard,
-    MatCardContent,
-    MatCardHeader,
-    MatCardImage,
-    RouterLinkActive,
-    RouterLink,
-    NgForOf,
-    NgIf
-  ],
+    imports: [
+        MatButton,
+        MatCard,
+        MatCardContent,
+        MatCardHeader,
+        MatCardImage,
+        RouterLinkActive,
+        RouterLink,
+        NgForOf,
+        NgIf,
+        HeaderContentComponent
+    ],
   templateUrl: './tour-payment.component.html',
   styleUrl: './tour-payment.component.css'
 })

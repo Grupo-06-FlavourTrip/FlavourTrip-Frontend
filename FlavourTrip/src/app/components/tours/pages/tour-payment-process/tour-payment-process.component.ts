@@ -6,19 +6,21 @@ import {ToursService} from "../../services/tours.service";
 import {TourListComponent} from "../tour-list/tour-list.component";
 import {BookingService} from "../../../booking/services/booking.service";
 import {Booking} from "../../../booking/model/booking.entity";
+import {HeaderContentComponent} from "../../../../public/components/header-content/header-content.component";
 
 @Component({
   selector: 'app-tour-payment-process',
   standalone: true,
-  imports: [
-    MatButton,
-    RouterLinkActive,
-    RouterLink,
-    MatCardImage,
-    MatCard,
-    MatCardContent,
-    MatCardHeader
-  ],
+    imports: [
+        MatButton,
+        RouterLinkActive,
+        RouterLink,
+        MatCardImage,
+        MatCard,
+        MatCardContent,
+        MatCardHeader,
+        HeaderContentComponent
+    ],
   templateUrl: './tour-payment-process.component.html',
   styleUrl: './tour-payment-process.component.css'
 })

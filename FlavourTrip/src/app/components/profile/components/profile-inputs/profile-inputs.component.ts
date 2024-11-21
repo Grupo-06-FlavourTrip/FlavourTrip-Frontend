@@ -10,11 +10,12 @@ import {Usuario} from '../../model/usuario.entity';
 import {CommonModule} from '@angular/common';
 import {Method} from "../../model/method.entity";
 import {MethodService} from "../../services/method.service";
+import {HeaderContentComponent} from "../../../../public/components/header-content/header-content.component";
 
 @Component({
   selector: 'app-profile-inputs',
   standalone: true,
-  imports: [MatGridListModule, MatFormFieldModule, MatInputModule, MatButtonModule, RouterLink, CommonModule],
+    imports: [MatGridListModule, MatFormFieldModule, MatInputModule, MatButtonModule, RouterLink, CommonModule, HeaderContentComponent],
   templateUrl: './profile-inputs.component.html',
   styleUrl: './profile-inputs.component.css'
 })
