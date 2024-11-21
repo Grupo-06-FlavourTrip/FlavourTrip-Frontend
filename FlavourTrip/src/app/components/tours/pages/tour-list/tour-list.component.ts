@@ -121,6 +121,10 @@ export class TourListComponent implements OnInit{
 
   ngOnInit() {
     this.getAllTours();
+    const state = history.state;
+    if (state.newTour) {
+      this.dataT.push(state.newTour);
+    }
   }
 
   onMoreInfo(tour: any) {

@@ -13,7 +13,8 @@ import { ToursService } from '../../services/tours.service';
   imports: [MatFormFieldModule, FormsModule,
     MatInputModule,
     MatButtonModule,
-    MatIconModule,],
+    MatIconModule,
+  ],
   templateUrl: './tour-form.component.html',
   styleUrl: './tour-form.component.css'
 })
@@ -45,11 +46,12 @@ export class TourFormComponent {
   onSubmit() {
     this.toursService.create(this.tour).subscribe({
       next: (newTour) => {
+        console.log('Tour added:', newTour);
         this.clearForm();
+        this.router.navigate(['/tour-list'], { state: { newTour } });
       },
       error: (err) => console.error('Error adding tour:', err),
     });
-    this.router.navigate(['/tour-list']);
   }
 
   onCancel() {
