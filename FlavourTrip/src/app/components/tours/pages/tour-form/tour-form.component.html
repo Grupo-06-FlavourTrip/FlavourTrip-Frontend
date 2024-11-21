@@ -1,67 +1,45 @@
+<body>
 <div class="form-container">
-  <h2>Agregar Tour</h2>
+  <h1>Agregar Tour</h1>
 
   <form (ngSubmit)="onSubmit()" #tourForm="ngForm">
-    <mat-form-field>
-      <input matInput placeholder="Titulo" name="titleTour" ngModel required>
-    </mat-form-field>
-    
-    <mat-form-field>
-      <textarea matInput placeholder="Imagen" name="imageTour" ngModel required></textarea>
-    </mat-form-field>
-    
-    <mat-form-field>
-      <input matInput placeholder="Instructor" name="instructor" ngModel required>
-    </mat-form-field>
-    
-    <mat-form-field>
-      <input matInput placeholder="Rating" name="rating" ngModel required>
-    </mat-form-field>
-    
-    <mat-form-field>
-      <input matInput placeholder="Número de ratings" name="numberOfRatings" ngModel required>
-    </mat-form-field>
-    
-    <mat-form-field>
-      <input matInput placeholder="Precio mínimo" name="minPrice" ngModel required>
-    </mat-form-field>
-    
-    <mat-form-field>
-      <input matInput placeholder="Cantidad de personas" name="currentPeople" ngModel required>
-    </mat-form-field>
-   
-    <mat-form-field>
-      <input matInput placeholder="Máximo de personas" name="maxPeople" ngModel required>
-    </mat-form-field>
-    <br>
-    <mat-form-field>
-      <input matInput placeholder="Idiomas" name="language" ngModel required>
-    </mat-form-field>
-    
-    <mat-form-field>
-      <input matInput placeholder="Duración en horas" name="duration" ngModel required>
-    </mat-form-field>
-    <mat-form-field>
-      <input matInput placeholder="Items incluidos" name="itemsIncluded" ngModel required>
-    </mat-form-field>
-    <mat-form-field>
-      <input matInput placeholder="Fecha" name="date" ngModel required>
-    </mat-form-field>
-    <mat-form-field>
-      <input matInput placeholder="Descripción" name="description" ngModel required>
-    </mat-form-field>
-    <mat-form-field>
-      <input matInput placeholder="Horarios" name="times" ngModel required>
-    </mat-form-field>
-    <mat-form-field>
-      <input matInput placeholder="Horas" name="hours" ngModel required>
-    </mat-form-field>
-    <mat-form-field>
-      <input matInput placeholder="Restaurantes" name="titleRestaurant" ngModel required>
-    </mat-form-field>
-    <div style="align-items: center; align-content: center; text-align: center;">
-      <button mat-flat-button color="primary" type="submit">Guardar</button>
-      <button mat-flat-button color="warn" type="button" (click)="onCancel()">Cancelar</button>
+
+    <input id="titleTour" placeholder="Título" [(ngModel)]="tour.titleTour" type="text" pInputText class="input-field" required>
+
+    <input id="imageTour" placeholder="Imagen (URL)" [(ngModel)]="tour.imageTour" type="text" pInputText class="input-field" required>
+
+    <input id="instructor" placeholder="Instructor" [(ngModel)]="tour.instructor" type="text" pInputText class="input-field" required>
+
+    <input id="rating" placeholder="Rating" [(ngModel)]="tour.rating" type="number" pInputText class="input-field" required>
+
+    <input id="numberOfRatings" placeholder="Número de ratings" [(ngModel)]="tour.numberOfRatings" type="number" pInputText class="input-field" required>
+
+    <input id="minPrice" placeholder="Precio mínimo" [(ngModel)]="tour.minPrice" type="number" pInputText class="input-field" required>
+
+    <input id="currentPeople" placeholder="Cantidad de personas" [(ngModel)]="tour.currentPeople" type="number" pInputText class="input-field" required>
+
+    <input id="maxPeople" placeholder="Máximo de personas" [(ngModel)]="tour.maxPeople" type="number" pInputText class="input-field" required>
+
+    <input id="language" placeholder="Idiomas" [(ngModel)]="tour.language" type="text" pInputText class="input-field" required>
+
+    <input id="duration" placeholder="Duración en horas" [(ngModel)]="tour.duration" type="number" pInputText class="input-field" required>
+
+    <input id="itemsIncluded" placeholder="Items incluidos" [(ngModel)]="tour.itemsIncluded" type="text" pInputText class="input-field" required>
+
+    <input id="date" placeholder="Fecha" [(ngModel)]="tour.date" type="date" pInputText class="input-field" required>
+
+    <input id="description" placeholder="Descripción" [(ngModel)]="tour.description" type="text" pInputText class="input-field" required>
+
+    <input id="times" placeholder="Horarios" [(ngModel)]="tour.times" type="text" pInputText class="input-field" required>
+
+    <input id="hours" placeholder="Horas" [(ngModel)]="tour.hours" type="text" pInputText class="input-field" required>
+
+    <input id="titleRestaurant" placeholder="Restaurantes" [(ngModel)]="tour.titleRestaurant" type="text" pInputText class="input-field" required>
+
+    <div style="align-items: center; align-content: center; text-align: center; margin-top: 40px;">
+      <button mat-stroked-button class="boton" style="color:white;" type="submit">Guardar</button>
+      <button mat-stroked-button (click)="onCancel()" class="boton" style="color:white;">Cancelar</button>
     </div>
   </form>
 </div>
+</body>
